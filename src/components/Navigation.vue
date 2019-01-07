@@ -11,7 +11,7 @@
       </v-list-tile-action>
       <v-list-tile-content>
         <v-list-tile-title>{{ item.title }}</v-list-tile-title>
-      </v-list-tile-content>          
+      </v-list-tile-content>
     </v-list-tile>
     <template v-if="authenticated">
       <v-divider></v-divider>
@@ -24,8 +24,8 @@
         </v-list-tile-action>
         <v-list-tile-content>
           <v-list-tile-title>Requests</v-list-tile-title>
-        </v-list-tile-content>          
-      </v-list-tile> 
+        </v-list-tile-content>
+      </v-list-tile>
     </template>
     <v-divider></v-divider>
     <v-list-tile
@@ -39,7 +39,7 @@
       </v-list-tile-action>
       <v-list-tile-content>
         <v-list-tile-title>{{ item.title }}</v-list-tile-title>
-      </v-list-tile-content>          
+      </v-list-tile-content>
     </v-list-tile>
     <v-list-tile v-if="authenticated" @click="logOut">
       <v-list-tile-action>
@@ -48,14 +48,15 @@
       <v-list-tile-content>
         <v-list-tile-title>Log out</v-list-tile-title>
       </v-list-tile-content>
-    </v-list-tile>           
-  </v-list>  
+    </v-list-tile>
+  </v-list>
 </template>
 
 <script>
 export default {
   computed: {
     authenticated () {
+      console.log(this.$store.getters.authenticated)
       return this.$store.getters.authenticated
     },
     bookItems () {
