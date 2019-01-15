@@ -56,7 +56,7 @@
 export default {
   computed: {
     authenticated () {
-      console.log(this.$store.getters.authenticated)
+      // console.log(this.$store.getters.authenticated)
       return this.$store.getters.authenticated
     },
     bookItems () {

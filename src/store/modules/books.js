@@ -21,7 +21,7 @@ export default {
         const { data: { books } } = await server.get('/books/all')
         commit('setBooks', books)
       } catch (error) {
-        console.log(error)
+        // console.log(error)
         commit('activateSnackbar', {
           message: 'Couldn\'t connect to the server',
           context: 'error',

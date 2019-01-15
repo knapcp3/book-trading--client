@@ -18,13 +18,13 @@ export default {
   actions: {
     logIn: async ({ commit }, payload) => {
       const { data: user, headers } = await server.post('/users/login', payload)
-      console.log('login ' + JSON.stringify(headers))
+      // console.log('login ' + JSON.stringify(headers))
       commit('setUser', user)
       commit('setAuthToken', headers.authorization)
     },
     signUp: async ({ commit }, payload) => {
       const { data: user, headers } = await server.post('/users/signup', payload)
-      console.log('REGISTER ' + JSON.stringify(headers))
+      // console.log('REGISTER ' + JSON.stringify(headers))
       commit('setUser', user)
       commit('setAuthToken', headers.authorization)
     }

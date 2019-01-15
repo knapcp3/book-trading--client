@@ -19,7 +19,9 @@
   ],
   "env": {
     "test": {
-      "presets": ["env", "stage-2"],
+      "presets": [
+        ["env", { "targets": { "node": "current" }}]
+      ],
       "plugins": ["istanbul"]
     }
   }
