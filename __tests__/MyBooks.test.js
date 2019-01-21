@@ -2,7 +2,7 @@ import { mount, createLocalVue } from '@vue/test-utils'
 import MyBooks from './../src/components/MyBooks'
 import Vuetify from 'vuetify'
 import store from './../src/store'
-import { RouterLinkStub } from '@vue/test-utils';
+// import { RouterLinkStub, RouterViewStub } from '@vue/test-utils';
 // import Vue from 'vue'
 
 describe('MyBooks Component', () => {
@@ -15,9 +15,7 @@ describe('MyBooks Component', () => {
     wrapper = mount(MyBooks, {
       localVue,
       sync: false,
-      stubs: {
-        RouterLink: RouterLinkStub
-      },
+      stubs: ['router-link', 'router-view'],
       store
     })
   })

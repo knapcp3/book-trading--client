@@ -3,7 +3,7 @@ import Signup from './../src/components/Signup'
 import Vuetify from 'vuetify'
 // import Vue from 'vue'
 
-describe('Signup Component', () => {
+describe('Signup Component unit testing', () => {
   let wrapper
 
   beforeEach(() => {
@@ -16,7 +16,7 @@ describe('Signup Component', () => {
     })
   })
 
-  test(`Picks 'username already exists' error text when data code === 11000`, () => {
+  test(`pickErrorMessage() picks 'username already exists' error text when data code === 11000`, () => {
     const vm = wrapper.vm
 
     const result = vm.pickErrorMessage({response: {
@@ -27,7 +27,7 @@ describe('Signup Component', () => {
     expect(result).toContain("This username already exists")
   })
 
-  test('Picks general error text when data code !== 11000', () => {
+  test('pickErrorMessage() picks general error text when data code !== 11000', () => {
     const vm = wrapper.vm
 
     const result = vm.pickErrorMessage({response: {
