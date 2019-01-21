@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for root/home/knap/Documents/uj/3.1/testowanie/projekt/book-trading--client/src/store/modules/books.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../../../../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../../../../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../../../../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../../../../../../../../index.html">All files</a> / <a href="index.html">root/home/knap/Documents/uj/3.1/testowanie/projekt/book-trading--client/src/store/modules</a> books.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">4.76% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>1/21</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/2</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">6.67% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/15</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">6.25% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>1/16</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import server from '@/axios'
+&nbsp;
+export default {
+  state: {
+    books: []
+  },
+  mutations: {
+    addBook: <span class="fstat-no" title="function not covered" >(s</span>tate, payload) =&gt; {
+<span class="cstat-no" title="statement not covered" >      state.books.unshift(payload)</span>
+    },
+    setBooks: <span class="fstat-no" title="function not covered" >(s</span>tate, payload) =&gt; {
+<span class="cstat-no" title="statement not covered" >      state.books = payload</span>
+    },
+    removeBook: <span class="fstat-no" title="function not covered" >(s</span>tate, { _id }) =&gt; {
+<span class="cstat-no" title="statement not covered" >      state.books = state.books.filter(<span class="fstat-no" title="function not covered" >bo</span>ok =&gt; <span class="cstat-no" title="statement not covered" >book._id !== _id)</span></span>
+    }
+  },
+  actions: {
+    fetchBooks: <span class="fstat-no" title="function not covered" >as</span>ync ({ commit }) =&gt; {
+<span class="cstat-no" title="statement not covered" >      try {</span>
+        const { data: { books } } = <span class="cstat-no" title="statement not covered" >await server.get('/books/all')</span>
+<span class="cstat-no" title="statement not covered" >        commit('setBooks', books)</span>
+      } catch (error) {
+        // console.log(error)
+<span class="cstat-no" title="statement not covered" >        commit('activateSnackbar', {</span>
+          message: 'Couldn\'t connect to the server',
+          context: 'error',
+          timeout: 0
+        })
+      }
+    },
+    saveBook: <span class="fstat-no" title="function not covered" >as</span>ync ({ commit, getters }, payload) =&gt; {
+      const { data: book } = <span class="cstat-no" title="statement not covered" >await server({</span>
+        method: 'post',
+        url: '/books/add',
+        headers: { 'Authorization': getters.authToken },
+        data: {
+          title: payload.title,
+          author: payload.authors ? payload.authors[0] : 'Unknown',
+          image: payload.imageLinks.thumbnail
+        }
+      })
+<span class="cstat-no" title="statement not covered" >      commit('addBook', book)</span>
+    },
+    removeBook: <span class="fstat-no" title="function not covered" >as</span>ync ({ commit, getters }, payload) =&gt; {
+<span class="cstat-no" title="statement not covered" >      console.log(getters)</span>
+<span class="cstat-no" title="statement not covered" >      await server({</span>
+        method: 'delete',
+        url: '/books/remove',
+        headers: { 'Authorization': getters.authToken },
+        data: payload
+      })
+<span class="cstat-no" title="statement not covered" >      commit('removeBook', payload)</span>
+    }
+  },
+  getters: {
+    allBooks: <span class="fstat-no" title="function not covered" >st</span>ate =&gt; <span class="cstat-no" title="statement not covered" >state.books,</span>
+    userBooks: (state, getters) =&gt; state.books.filter(<span class="fstat-no" title="function not covered" >bo</span>ok =&gt; <span class="cstat-no" title="statement not covered" >book.ownerId === getters.uid)</span>,
+    otherBooks: <span class="fstat-no" title="function not covered" >(s</span>tate, getters) =&gt; <span class="cstat-no" title="statement not covered" >state.books.filter(<span class="fstat-no" title="function not covered" >bo</span>ok =&gt; <span class="cstat-no" title="statement not covered" >book.ownerId !== getters.uid)</span>,</span>
+    bookTitleById: <span class="fstat-no" title="function not covered" >st</span>ate =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >id</span> =&gt; <span class="cstat-no" title="statement not covered" >state.books.find(<span class="fstat-no" title="function not covered" >bo</span>ok =&gt; <span class="cstat-no" title="statement not covered" >book._id === id)</span>.title</span></span>
+  }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Jan 21 2019 22:10:11 GMT+0100 (Central European Standard Time)
+</div>
+</div>
+<script src="../../../../../../../../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../../../../../../../../sorter.js"></script>
+</body>
+</html>

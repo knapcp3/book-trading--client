@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for root/home/knap/Documents/uj/3.1/testowanie/projekt/book-trading--client/src/components/Signup.vue</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../../../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../../../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../../../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../../../../../../../index.html">All files</a> / <a href="index.html">root/home/knap/Documents/uj/3.1/testowanie/projekt/book-trading--client/src/components</a> Signup.vue
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">46.67% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>7/15</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">66.67% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>10/15</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">85.71% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>6/7</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">50% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>7/14</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&lt;template&gt;
+  &lt;v-layout row&gt;
+    &lt;v-flex sm6 offset-sm3&gt;
+      &lt;v-card&gt;
+        &lt;v-card-title class="primary"&gt;
+          &lt;v-container class="pb-0 pt-1"&gt;
+            &lt;h3 class="headline mb-0 white--text"&gt;Signup Form&lt;/h3&gt;
+          &lt;/v-container&gt;
+        &lt;/v-card-title&gt;        
+        &lt;v-card-text&gt;
+          &lt;v-container&gt;
+            &lt;v-form @submit.prevent="signUp" v-model="valid"&gt;
+              &lt;v-layout row&gt;
+                &lt;v-flex xs12&gt;
+                  &lt;v-text-field
+                    v-model="username"
+                    :rules="usernameRules"
+                    name="username"
+                    label="Username"
+                    type="text"
+                    required
+                  &gt;&lt;/v-text-field&gt;
+                &lt;/v-flex&gt;
+              &lt;/v-layout&gt;
+              &lt;v-layout row&gt;
+                &lt;v-flex xs12&gt;
+                  &lt;v-text-field
+                    v-model="password"
+                    :rules="passwordRules"
+                    name="password" label="Password"
+                    type="password"
+                    required
+                  &gt;&lt;/v-text-field&gt;
+                &lt;/v-flex&gt;
+              &lt;/v-layout&gt;
+              &lt;v-layout row&gt;
+                &lt;v-flex xs12&gt;
+                  &lt;v-btn
+                    block
+                    primary
+                    large
+                    class="mt-4"
+                    type="submit"
+                    :loading="loading"
+                    :disabled="!valid"
+                  &gt;
+                    Sign up
+                  &lt;/v-btn&gt;
+                &lt;/v-flex&gt;
+              &lt;/v-layout&gt;
+            &lt;/v-form&gt;
+          &lt;/v-container&gt;
+        &lt;/v-card-text&gt;
+      &lt;/v-card&gt;
+    &lt;/v-flex&gt;
+  &lt;/v-layout&gt;
+&lt;/template&gt;
+&nbsp;
+&lt;script&gt;
+export default {
+  data () {
+    return {
+      valid: false,
+      username: '',
+      usernameRules: [
+        (v) =&gt; !!v || 'Username is required',
+        (v) =&gt; v.length &gt;= 3 || 'Username must be at least 3 characters long'
+      ],
+      password: '',
+      passwordRules: [
+        (v) =&gt; !!v || 'Password is required',
+        (v) =&gt; v.length &gt;= 6 || 'Password must be at least 6 characters long'
+      ],
+      loading: false
+    }
+  },
+  methods: {
+<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >    async signUp () {</span></span></span>
+      try {
+<span class="cstat-no" title="statement not covered" >        this.loading = true</span>
+&nbsp;
+        await this.$store.dispatch('signUp', {
+          username: this.username,
+          password: this.password
+        })
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        this.loading = false</span>
+<span class="cstat-no" title="statement not covered" >        this.$router.push('/')</span>
+      } catch (error) {
+<span class="cstat-no" title="statement not covered" >        this.loading = false</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        const errorMessage = this.pickErrorMessage(error)</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        this.$store.commit('activateSnackbar', {</span>
+          message: errorMessage,
+          context: 'error'
+        })
+      }
+    },
+    pickErrorMessage: error =&gt;
+      error.response &amp;&amp; (error.response.data.code === 11000)
+        ? 'This username already exists.'
+        : 'Something went wrong.'
+  }
+}
+&lt;/script&gt;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Jan 21 2019 22:10:11 GMT+0100 (Central European Standard Time)
+</div>
+</div>
+<script src="../../../../../../../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../../../../../../../sorter.js"></script>
+</body>
+</html>
