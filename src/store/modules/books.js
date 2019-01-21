@@ -43,6 +43,7 @@ export default {
       commit('addBook', book)
     },
     removeBook: async ({ commit, getters }, payload) => {
+      console.log(getters)
       await server({
         method: 'delete',
         url: '/books/remove',
