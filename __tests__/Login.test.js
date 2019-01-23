@@ -3,7 +3,7 @@ import Login from '../src/components/Login'
 import Vuetify from 'vuetify'
 import VueRouter from 'vue-router'
 import Vuex from 'vuex'
-import { generateWrapper } from './helpers'
+import { generateWrapper, mockThrowError } from './helpers'
 
 describe('Login Component testing with store', () => {
     let store;
@@ -12,7 +12,7 @@ describe('Login Component testing with store', () => {
     let wrapper;
     let localVue;
 
-    beforeEach(() => {
+    beforeAll(() => {
         localVue = createLocalVue();
         localVue.use(Vuetify);
         localVue.use(VueRouter);
@@ -46,13 +46,8 @@ describe('Login Component testing with store', () => {
     });
 
     test('after submitting a form, error while loggin in causes commiting snackbar mutation with correct context and message', (done) => {
-        const logInActionMock = jest.fn();
-        logInActionMock.mockImplementation(() => {
-            throw new Error()
-        });
-
         actions = {
-            logIn: logInActionMock
+            logIn: mockThrowError()
         };
 
         mutations = {

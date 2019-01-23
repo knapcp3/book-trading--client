@@ -96,6 +96,6 @@
       ".*\\.(vue)$": "vue-jest",
       "^.+\\.js$": "<rootDir>/node_modules/babel-jest"
     },
-    "testPathIgnorePatterns": ["helpers.js"]
+    "testPathIgnorePatterns": ["helpers.js", "mocks.js"]
   }
 }

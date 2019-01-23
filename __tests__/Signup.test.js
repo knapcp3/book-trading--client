@@ -3,7 +3,7 @@ import Signup from './../src/components/Signup'
 import Vuetify from 'vuetify'
 import VueRouter from 'vue-router'
 import Vuex from 'vuex'
-import { generateWrapper } from './helpers'
+import { generateWrapper, mockThrowError } from './helpers'
 
 describe('Signup Component unit testing', () => {
   let wrapper
@@ -80,13 +80,8 @@ describe('Singup Component testing with store', () => {
   })
 
   test('after submitting a form, error while signing up causes commiting snackbar mutation wth correct context and message', (done) => {
-    const signUpActionMock = jest.fn()
-    signUpActionMock.mockImplementation(() => {
-      throw new Error()
-    })
-
     actions = {
-      signUp: signUpActionMock
+      signUp: mockThrowError()
     }
 
     mutations = {

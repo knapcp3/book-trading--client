@@ -13,9 +13,9 @@ export const generateWrapperWithAuth = function(component, localVue, isAuth) {
   })
 }
 
-
-export const generateWrapper = function(component, localVue, mountWay, store) {
+export const generateWrapper = function(component, localVue, mountWay, store, options) {
   let mWay, st
+  let op = options || {}
 
   const router = new VueRouter()
 
@@ -25,15 +25,26 @@ export const generateWrapper = function(component, localVue, mountWay, store) {
     case 3:
       mWay = mountWay;
     case 4:
+    case 5:
       mWay = mountWay;
       st = store;
     default:
   }
+
   return mWay(component, {
     localVue,
     sync: false,
     router,
     store: st,
     stubs: ['router-link', 'router-view'],
+    ...op
   })
+}
+
+export const mockThrowError = () => {
+  const f = jest.fn()
+  f.mockImplementation(() => {
+    throw new Error()
+  })
+  return f;
 }

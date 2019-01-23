@@ -9,6 +9,7 @@
           autofocus
           v-model="searchKeyword"
           @keydown="getBooks"
+          class="add-book-field"
         ></v-text-field>
         <v-progress-linear v-if="loading" height="2" class="mt-0 mb-0" indeterminate></v-progress-linear>
       </v-flex>
@@ -42,7 +43,7 @@
           <v-card-actions>
             <v-btn class="green--text darken-1" :loading="saveInProgress" flat="flat" @click.native="saveBook">Yes</v-btn>
             <v-btn class="red--text darken-1" flat="flat" @click.native="dialog = false">No</v-btn>
-          </v-card-actions>         
+          </v-card-actions>
         </v-card>
       </v-dialog>
     </v-layout>
@@ -94,11 +95,11 @@ export default {
         const pickedBook = this.pickedBook.info.volumeInfo
 
         await this.$store.dispatch('saveBook', pickedBook)
-
         this.books.splice(this.pickedBook.index, 1)
 
         this.saveInProgress = false
         this.dialog = false
+
         this.$store.commit('activateSnackbar', {
           message: 'Book was added to your collection',
           context: 'success'
