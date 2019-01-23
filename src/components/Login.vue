@@ -9,7 +9,8 @@
         </v-card-title>
         <v-card-text>
           <v-container>
-            <v-form @submit.prevent="logIn" v-model="valid">
+            <v-form @submit.prevent="logIn" v-model="valid"
+            class="log-in-form">
               <v-layout row>
                 <v-flex xs12>
                   <v-text-field
@@ -17,6 +18,7 @@
                     :rules="usernameRules"
                     name="username"
                     label="Username"
+                    class="username-field"
                     type="text"
                     required
                   ></v-text-field>
@@ -29,6 +31,7 @@
                     :rules="passwordRules"
                     name="password"
                     label="Password"
+                    class="password-field"
                     type="password"
                     required
                   ></v-text-field>
@@ -40,7 +43,7 @@
                     block
                     primary
                     large
-                    class="mt-4"
+                    class="mt-4 log-in-btn"
                     type="submit"
                     :loading="loading"
                     :disabled="!valid"
