@@ -1,7 +1,6 @@
 import { createLocalVue, mount } from '@vue/test-utils'
 import Navigation from './../src/components/Navigation'
 import Vuetify from 'vuetify'
-// import store from './../src/store'
 import VueRouter from 'vue-router'
 import Vuex from 'vuex'
 import { generateWrapperWithAuth } from "./helpers"
@@ -41,7 +40,7 @@ describe('Navigation Component unit testing', () => {
   })
 })
 
-describe('Navigation Component store testing', () => {
+describe('Navigation Component testing with store', () => {
   let store
   let mutations
   let wrapper
@@ -77,10 +76,9 @@ describe('Navigation Component store testing', () => {
         authenticated: () => {return true;}
       }
     })
-
   })
 
-  test('logOut button click triggers committing setUser mutation with username and id equal to null', () => {
+  test('logOut button click commits setUser mutation with username and id equal to null', () => {
     wrapper.find('.log-out-btn').trigger('click')
 
     expect(mutations.setUser).toHaveBeenCalled()
@@ -88,7 +86,7 @@ describe('Navigation Component store testing', () => {
       .toEqual({ username: null, _id: null })
   })
 
-  test('logOut button click trigger committing setAuthToken mutation with token equal to null', () => {
+  test('logOut button click commits setAuthToken mutation with token equal to null', () => {
     wrapper.find('.log-out-btn').trigger('click')
 
     expect(mutations.setAuthToken).toHaveBeenCalled()

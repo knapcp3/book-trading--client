@@ -6,10 +6,10 @@
           <v-container class="pb-0 pt-1">
             <h3 class="headline mb-0 white--text">Signup Form</h3>
           </v-container>
-        </v-card-title>        
+        </v-card-title>
         <v-card-text>
           <v-container>
-            <v-form @submit.prevent="signUp" v-model="valid">
+            <v-form @submit.prevent="signUp" v-model="valid" class="sign-up-form">
               <v-layout row>
                 <v-flex xs12>
                   <v-text-field
@@ -18,6 +18,7 @@
                     name="username"
                     label="Username"
                     type="text"
+                    class="username-field"
                     required
                   ></v-text-field>
                 </v-flex>
@@ -29,6 +30,7 @@
                     :rules="passwordRules"
                     name="password" label="Password"
                     type="password"
+                    class="password-field"
                     required
                   ></v-text-field>
                 </v-flex>
@@ -39,7 +41,7 @@
                     block
                     primary
                     large
-                    class="mt-4"
+                    class="mt-4 sign-up-btn"
                     type="submit"
                     :loading="loading"
                     :disabled="!valid"
