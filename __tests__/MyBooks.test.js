@@ -4,9 +4,9 @@ import Vuex from 'vuex'
 import Vuetify from 'vuetify'
 import VueRouter from 'vue-router'
 import { bookMock, booksMock } from './mocks'
-import { generateWrapper } from './helpers'
+import { generateWrapper, mockThrowError } from './helpers'
 
-describe('MyBooks Component', () => {
+describe('MyBooks Component testing', () => {
   let wrapper
   let storeMock
   let actions
@@ -45,28 +45,66 @@ describe('MyBooks Component', () => {
     })
   })
 
-  // test('removeBook() dispatches removeBook action when removeEnabled property returns true', () => {
-  //   actions = {
-  //     removeBook: jest.fn()
-  //   }
+  test('removeBook() dispatches removeBook action when removeEnabled property returns true', (done) => {
+    actions = {
+      removeBook: jest.fn()
+    }
 
-  //   storeMock = new Vuex.Store({
-  //     state: {},
-  //     actions
-  //   })
+    storeMock = new Vuex.Store({
+      state: {},
+      actions,
+    })
 
-  //   const computed = {
-  //     removeEnabled: () => true,
-  //     books: () => booksMock
-  //   }
+    const computed = {
+      removeEnabled: () => true,
+      books: () => booksMock
+    }
 
-  //   wrapper = generateWrapper(MyBooks, localVue, mount, storeMock, { computed })
+    wrapper = generateWrapper(MyBooks, localVue, mount, storeMock, { computed })
 
-  //   wrapper.vm.removeBook(bookMock)
+    wrapper.vm.removeBook(bookMock)
 
-  //   wrapper.vm.$nextTick(() => {
-  //     expect(actions.removeBook).toHaveBeenCalledTimes(0)
-  //     done()
-  //   })
-  // })
+    wrapper.vm.$nextTick(() => {
+      expect(actions.removeBook).toHaveBeenCalled()
+      done()
+    })
+  })
+
+  test('removeBook() commits snackbar mutation with correct msg when error occurs', (done) => {
+    actions = {
+      removeBook: mockThrowError()
+    }
+
+    mutations = {
+      activateSnackbar: jest.fn()
+    }
+
+    storeMock = new Vuex.Store({
+      state: {},
+      actions,
+      mutations
+    })
+
+    const computed = {
+      removeEnabled: () => true,
+      books: () => booksMock
+    }
+
+    wrapper = generateWrapper(MyBooks, localVue, mount, storeMock, { computed })
+
+    wrapper.vm.removeBook(bookMock)
+
+    wrapper.vm.$nextTick(() => {
+      expect(actions.removeBook).toHaveBeenCalled()
+      expect(mutations.activateSnackbar.mock.calls[0][1])
+        .toEqual({
+          message: 'Unable to remove the book.',
+          context: 'error'
+        })
+      done()
+    })
+  })
 })
+
+
+

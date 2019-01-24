@@ -46,7 +46,10 @@ describe('AddBook Component testing', () => {
     wrapper.vm.$nextTick(() => {
       expect(actions.saveBook).toHaveBeenCalled()
       expect(actions.saveBook.mock.calls[0][1])
-        .toEqual(pickedBookMock.info.volumeInfo)
+        .toEqual({
+          authors: 'authors',
+          title: 'title'
+        })
       wrapper.vm.$nextTick(() => {
         expect(mutations.activateSnackbar).toHaveBeenCalled()
         expect(mutations.activateSnackbar.mock.calls[0][1])
@@ -94,5 +97,3 @@ describe('AddBook Component testing', () => {
 
   })
 })
-
-

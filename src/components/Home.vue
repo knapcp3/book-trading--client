@@ -6,7 +6,7 @@
           label="Pick a book you'd like to borrow."
           prepend-icon="search"
           solo
-          class="mb-4"
+          class="mb-4 home-search-field"
           v-model="searchKeyword"
         ></v-text-field>
       </v-flex>
@@ -20,7 +20,7 @@
           :key="book.title"
           :src="book.image"
           alt="Book Image"
-          class="mr-2 ml-2 mt-2 mb-2"
+          class="mr-2 ml-2 mt-2 mb-2 book-img"
         >
       </v-flex>
     </v-layout>
@@ -29,9 +29,9 @@
         <v-card-title class="headline primary--text">Borrow book</v-card-title>
         <v-card-text>Send request to borrow "{{ pickedBook.title }}" from {{ pickedBook.ownerUsername }}?</v-card-text>
         <v-card-actions>
-          <v-btn :loading="loading" class="green--text darken-1" flat="flat" @click.native="sendRequest">Yes</v-btn>
+          <v-btn :loading="loading" class="green--text darken-1 send-req-btn" flat="flat" @click.native="sendRequest">Yes</v-btn>
           <v-btn class="red--text darken-1" flat="flat" @click.native="dialog = false">No</v-btn>
-        </v-card-actions>         
+        </v-card-actions>
       </v-card>
     </v-dialog>
   </div>

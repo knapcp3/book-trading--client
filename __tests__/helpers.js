@@ -41,10 +41,11 @@ export const generateWrapper = function(component, localVue, mountWay, store, op
   })
 }
 
-export const mockThrowError = () => {
+export const mockThrowError = (msg) => {
+  const m = msg || 'error'
   const f = jest.fn()
   f.mockImplementation(() => {
-    throw new Error()
+    throw new Error(m)
   })
   return f;
 }
